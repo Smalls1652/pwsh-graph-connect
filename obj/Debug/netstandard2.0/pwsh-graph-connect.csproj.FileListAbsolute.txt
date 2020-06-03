@@ -1,9 +1,0 @@
-C:\Users\tlsmall1\Programming\pwsh-graph-connect\bin\Debug\netstandard2.0\pwsh_graph_connect.deps.json
-C:\Users\tlsmall1\Programming\pwsh-graph-connect\bin\Debug\netstandard2.0\pwsh_graph_connect.dll
-C:\Users\tlsmall1\Programming\pwsh-graph-connect\bin\Debug\netstandard2.0\pwsh_graph_connect.pdb
-C:\Users\tlsmall1\Programming\pwsh-graph-connect\obj\Debug\netstandard2.0\pwsh-graph-connect.csprojAssemblyReference.cache
-C:\Users\tlsmall1\Programming\pwsh-graph-connect\obj\Debug\netstandard2.0\pwsh-graph-connect.AssemblyInfoInputs.cache
-C:\Users\tlsmall1\Programming\pwsh-graph-connect\obj\Debug\netstandard2.0\pwsh-graph-connect.AssemblyInfo.cs
-C:\Users\tlsmall1\Programming\pwsh-graph-connect\obj\Debug\netstandard2.0\pwsh-graph-connect.csproj.CoreCompileInputs.cache
-C:\Users\tlsmall1\Programming\pwsh-graph-connect\obj\Debug\netstandard2.0\pwsh_graph_connect.dll
-C:\Users\tlsmall1\Programming\pwsh-graph-connect\obj\Debug\netstandard2.0\pwsh_graph_connect.pdb
