@@ -7,7 +7,7 @@ using Microsoft.Identity.Client;
 namespace pwsh_graph_connect
 {
     [Cmdlet(VerbsLifecycle.Start, "GraphApiConnection")]
-    public class AddGraphApiConnection : PSCmdlet
+    public class StartGraphApiConnection : PSCmdlet
     {
         [Parameter(
             Position = 0,
