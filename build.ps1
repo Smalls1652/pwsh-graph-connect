@@ -27,8 +27,8 @@ switch ((Test-Path -Path $buildDir)) {
 Write-Output "Building..."
 
 $null = New-Item -Path $buildDir -ItemType "Directory" -ErrorAction Stop
-Start-Process -FilePath "dotnet" -ArgumentList @("clean") -Wait
-Start-Process -FilePath "dotnet" -ArgumentList @("publish", "/property:PublishWithAspNetCoreTargetManifest=false") -Wait
+Start-Process -FilePath "dotnet" -ArgumentList @("clean") -Wait -NoNewWindow
+Start-Process -FilePath "dotnet" -ArgumentList @("publish", "/property:PublishWithAspNetCoreTargetManifest=false") -Wait -NoNewWindow
 
 Write-Output "Copying compiled files to the build directory..."
 Copy-Item -Path "./bin/Debug/netstandard2.0/publish/pwsh_graph_connect.dll" -Destination $buildDir
