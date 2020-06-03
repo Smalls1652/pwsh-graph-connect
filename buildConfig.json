@@ -7,12 +7,16 @@
     "CompanyName": "smalls.online",
     "Copyright": 2020,
     "ModuleVersion": "2020.06.01",
-    "Prerelease": "-alpha-01",
+    "Prerelease": "-alpha-02",
     "ProjectUri": "https://github.com/Smalls1652/pwsh-graph-connect",
     "CmdletsToExport": [
-        "Add-GraphApiConnection"
+        "Start-GraphApiConnection",
+        "Add-GraphApiSavedConnection",
+        "Remove-GraphApiSavedConnection",
+        "Get-GraphApiSavedConnections"
     ],
     "RequiredAssemblies": [
-        "Microsoft.Identity.Client.dll"
+        "Microsoft.Identity.Client.dll",
+        "Newtonsoft.Json.dll"
     ]
 }
