@@ -17,10 +17,11 @@ namespace pwsh_graph_connect
         public string ClientId;
 
         [Parameter(
-            Position = 1
+            Position = 1,
+            Mandatory = true
         )]
         [ValidateNotNullOrEmpty()]
-        public string TenantId = "common";
+        public string TenantId;
 
         private AuthenticationResult authContextResult;
 
