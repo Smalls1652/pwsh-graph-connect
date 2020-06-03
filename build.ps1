@@ -33,6 +33,7 @@ Start-Process -FilePath "dotnet" -ArgumentList @("publish", "/property:PublishWi
 Write-Output "Copying compiled files to the build directory..."
 Copy-Item -Path "./bin/Debug/netstandard2.0/publish/pwsh_graph_connect.dll" -Destination $buildDir
 Copy-Item -Path "./bin/Debug/netstandard2.0/publish/Microsoft.Identity.Client.dll" -Destination $buildDir
+Copy-Item -Path "./bin/Debug/netstandard2.0/publish/Newtonsoft.Json.dll" -Destination $buildDir
 
 <#
 Because of the differences in PowerShell 6 and higher for `ConvertFrom-Json`, we have to specify two ways to import the project config into a hashtable:
