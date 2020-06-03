@@ -11,17 +11,26 @@ namespace pwsh_graph_connect
     {
         [Parameter(
             Position = 0,
-            Mandatory = true
+            Mandatory = true,
+            ParameterSetName = "ManualEntry"
         )]
         [ValidateNotNullOrEmpty()]
         public string ClientId;
 
         [Parameter(
             Position = 1,
-            Mandatory = true
+            Mandatory = true,
+            ParameterSetName = "ManualEntry"
         )]
         [ValidateNotNullOrEmpty()]
         public string TenantId;
+
+        [Parameter(
+            Position = 2,
+            ParameterSetName = "InputObject",
+            ValueFromPipeline = true
+        )]
+        public SavedGraphApiConnection InputObject;
 
         private AuthenticationResult authContextResult;
 
@@ -30,6 +39,17 @@ namespace pwsh_graph_connect
             IEnumerable<string> authScopes = new [] {
                 ".default"
             };
+
+            switch (ParameterSetName)
+            {
+                case "InputObject":
+                    ClientId = InputObject.ClientId;
+                    TenantId = InputObject.TenantId;
+                    break;
+
+                default:
+                    break;
+            }
 
             WriteVerbose($"Creating client application for '{ClientId}'.");
             IPublicClientApplication clientApp = new ClientAppFactory().CreatePublicClient(ClientId, TenantId);
